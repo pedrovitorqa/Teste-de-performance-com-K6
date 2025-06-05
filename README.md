@@ -16,7 +16,7 @@
 
 ## 👀 Sobre
 
-Há alguns dias atrás, meu mentor me apresentou e incetivou a estudar uma ferramenta para realizar testes de perfomance. <br>
+Há alguns dias atrás, meu mentor me apresentou e incentivou a estudar uma ferramenta para realizar testes de performance. <br>
 Resolvi então realizar o curso e aprendi sobre:
 
 
