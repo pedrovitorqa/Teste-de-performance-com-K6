@@ -1,4 +1,5 @@
 import { browser } from 'k6/browser';
+
 import { sleep, check } from 'k6';
 
 export const options = {
@@ -16,7 +17,10 @@ export const options = {
     },
     thresholds: {
         checks: ['rate==1.0'],
+        browser_web_vital_fid: ["p(75) <= 100"],
+        browser_web_vital_lcp: ["p(75) <= 2500"],
     },
+    summaryTrendStats: ["min", "med", "avg", "max", "p(75)", "p(95)", "p(99)"],
 };
 
 export default async function () {
@@ -38,8 +42,7 @@ export default async function () {
         check(page, {
             'validação do header': () => headerText === 'Welcome, admin!',
         });
-        
-        sleep(1)
+
     } finally {
         page.close();
     }
